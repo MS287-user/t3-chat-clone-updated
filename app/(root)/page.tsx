@@ -1,6 +1,8 @@
 import { currentUser } from "@/modules/authentication/actions";
 import { ChatMessageView } from "@/modules/chat/components/chat-view/ChatMessageView";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { success: isLoggedIn, data: user } = await currentUser();
 

@@ -5,6 +5,8 @@ import { getAllChats } from "@/modules/chat/actions";
 import { ChatSidebar } from "@/modules/chat/components/ChatSidebar";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   const session = await requireAuth();
   const { data: chats } = await getAllChats();
